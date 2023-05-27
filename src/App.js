@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import PortfolioContainer from "./components/PortfolioContainer";
 import NavTabs from "./components/NavTabs";
 import AboutMe from './components/pages/About'
 import Resume from "./components/pages/Resume";
