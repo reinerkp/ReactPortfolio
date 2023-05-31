@@ -4,6 +4,8 @@ import AboutMe from "./components/pages/About";
 import Resume from "./components/pages/Resume";
 import Portfolio from "./components/pages/Portfolio";
 import ContactForm from "./components/pages/Contact";
+import Footer from './Footer';
+
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("AboutMe");
@@ -23,11 +25,15 @@ const App = () => {
 
   const handlePageChange = (page) => setCurrentPage(page);
   return (
-    <div id="page-wrapper">
-      <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-      <div id="main-page-content">{renderPage()}</div>
-      <footer>hello world footer</footer>
-    </div>
+    <div>
+    <header>
+    <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+    </header>
+    {renderPage()}
+    <footer>
+      <Footer />
+    </footer>
+  </div>
   );
 };
 

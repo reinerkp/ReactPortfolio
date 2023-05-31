@@ -24,3 +24,29 @@
    display: grid;
    place-items: center; 
 }
+/*Created max width as well as set margin to center cards. Removed flex to fix screen issues*/
+.all-project-cards {
+    padding: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-card {
+    padding: 10px;
+    height: 275px;
+    border-style: solid;
+    border-color: #004445;
+    border-width: 1.5px;
+    margin: 10px;
+    border-radius: 25px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+.pic1{
+    
+}
+  .pic2 {
+    width: 100%;
+    max-width: 500px;
+  }
