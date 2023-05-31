@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './contact-form.css';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -22,6 +23,15 @@ const ContactForm = () => {
 
     // Perform form validation
     // Send form data to the backend server for email processing
+    const formData = {
+      name: name,
+      email: email,
+      message: message,
+    };
+
+    const emailUrl = `mailto:jmac3292@gmail.com?subject=Contact Form Submission&body=${encodeURIComponent(
+      JSON.stringify(formData, null, 2)
+    )}`;
 
     // Reset the form fields
     setName('');
@@ -30,7 +40,6 @@ const ContactForm = () => {
   };
 
   return (
-    <div id="formWrapper">
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="name">Name:</label>
@@ -65,7 +74,6 @@ const ContactForm = () => {
         <button type="submit">Submit</button>
       </div>
     </form>
-    </div>
   );
 };
 
